@@ -7,8 +7,9 @@
 
 	<h2>
 		{% if user.is_authenticated %}
+		    {{ user.username }}
 		    <a href="{% url "userprofiles:logout" %}">logout</a>
-			{{ user.username }}
+			
 
 		{% else %}
 			<a href="{% url "userprofiles:authentication" %}">Login</a>
